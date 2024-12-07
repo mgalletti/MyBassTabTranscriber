@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Audio File</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // JavaScript to clear message and error divs before submitting
+        function clearMessages() {
+            document.getElementById('message').innerHTML = '';
+            document.getElementById('error').innerHTML = '';
+        }
+
+        // Optional: Automatically trigger this function when the form is submitted
+        $(document).ready(function(){
+            $("form").submit(function() {
+                clearMessages();
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-size: 16px;
+            color: #555;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="file"] {
+            font-size: 16px;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: green;
+        }
+        .error {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Your Audio File</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="file">Choose an audio file to upload (MP3, WAV, FLAC):</label>
+            <input type="file" name="file" id="file" accept=".mp3,.wav,.flac" required>
+            <input type="submit" value="Upload Audio">
+        </form>
+
+        {% if message %}
+            <div id="message" class="message">{{ message }}</div>
+        {% endif %}
+        {% if error %}
+            <div id ="error" class="error">{{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

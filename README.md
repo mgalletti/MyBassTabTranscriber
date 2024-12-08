@@ -11,3 +11,29 @@ It doesn't matter. You can use this code as you like or simply ignore it.
 
 I'd **really** appreciate feedbacks and contribution though 😃
 
+## Run Flask webserver
+
+As of the moment, the app run on a flask webserver to provide a simple interface to test the features.
+
+Run flask from project root
+```
+$ python src/app.py
+```
+
+## Testing and packaging
+The project is tested over multiple environments using [tox](https://tox.wiki/en/4.23.2/):
+
+Run tox from project root
+```
+$ tox
+```
+
+## Linting
+The project uses [ruff](https://docs.astral.sh/) for linting and code formatting.
+
+Run ruff from project root:
+```
+$ ruff check   # Lint all files in the current directory.
+$ ruff check --fix  # Lint all files in the current directory and fix errors.
+$ ruff format  # Format all files in the current directory.
+```

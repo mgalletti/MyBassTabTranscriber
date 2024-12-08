@@ -4,21 +4,29 @@ from pydub import AudioSegment
 from pydub.effects import normalize, low_pass_filter, high_pass_filter
 import noisereduce as nr
 import numpy as np
-from scipy.io.wavfile import read, write
-from validators.file_validators import FileValidator as AudioFileValidator, DEFAULT_ALLOWED_AUDIO_FILE_EXTENSION
+from scipy.io.wavfile import read
+from my_bass_tab_transcriber.validators.file_validators import (
+    FileValidator as AudioFileValidator,
+    DEFAULT_ALLOWED_AUDIO_FILE_EXTENSION,
+)
 from loguru import logger
 
 
 class AudioSegmentQualityImprover:
-    def __init__(self, audio_segment: AudioSegment, audio_file_validator: AudioFileValidator, temp_directory: str = ""):
+    def __init__(
+        self,
+        audio_segment: AudioSegment,
+        audio_file_validator: AudioFileValidator,
+        temp_directory: str = "",
+    ):
         logger.info("Initializing audio quality improver")
         self.audio_file_validator = audio_file_validator
         self.original_audio_segment = audio_segment
         self.temp_directory = temp_directory
         # Convert to mono and standardize frame rate
         self.mono_audio_segment = audio_segment.set_channels(1).set_frame_rate(44100)
-    
-    # TODO: review this logic. at the moment the audio is completely distorted.. 
+
+    # TODO: review this logic. at the moment the audio is completely distorted..
     def enhance_quality(self, output_audio_file: Optional[str] = None) -> AudioSegment:
         logger.info("Starting enhancing audio quality process..")
         # Check if output_audio_file is correctly formatted as a file
@@ -53,18 +61,24 @@ class AudioSegmentQualityImprover:
         # 3. Remove high hiss
         logger.debug("Removing high hiss..")
         processed_audio = low_pass_filter(processed_audio, cutoff=8000)
-        
+
         # Export enhanced audio
         if output_audio_file:
             logger.debug(f"Exporting enhanced audio to {output_audio_file}")
             processed_audio.export(output_audio_file, format="wav")
-            
+
         logger.info("Finished enhancing audio quality process.")
         return processed_audio
 
 
 class AudioFileQualityImprover(AudioSegmentQualityImprover):
-    def __init__(self,  audio_file_path, audio_file_validator: AudioFileValidator = AudioFileValidator(allowed_file_extension=DEFAULT_ALLOWED_AUDIO_FILE_EXTENSION)):
+    def __init__(
+        self,
+        audio_file_path,
+        audio_file_validator: AudioFileValidator = AudioFileValidator(
+            allowed_file_extension=DEFAULT_ALLOWED_AUDIO_FILE_EXTENSION
+        ),
+    ):
         audio_file_validator.validate(audio_file_path)
         audio_segment = AudioSegment.from_file(audio_file_path)
         super().__init__(audio_segment, audio_file_validator)

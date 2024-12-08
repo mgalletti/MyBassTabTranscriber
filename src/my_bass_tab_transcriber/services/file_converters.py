@@ -1,14 +1,15 @@
-import os
 from pydub import AudioSegment
-from validators import BaseValidator
+from my_bass_tab_transcriber.validators import BaseValidator
 
-   
+
 class WavAudioFileConverter:
     def __init__(self, base_validator: BaseValidator):
         self.validator = base_validator
         pass
-    
-    def convert_to_wav(self, input_file: str, output_file: str, sample_rate: int=16000):
+
+    def convert_to_wav(
+        self, input_file: str, output_file: str, sample_rate: int = 16000
+    ):
         """Converts input audio to:
             - `.wav` format.
             - Mono channel.
@@ -21,5 +22,5 @@ class WavAudioFileConverter:
         """
         self.validator.validate(input_file)
         audio: AudioSegment = AudioSegment.from_file(input_file)
-        audio = audio.set_frame_rate(sample_rate).set_channels(1)        
+        audio = audio.set_frame_rate(sample_rate).set_channels(1)
         audio.export(output_file, format="wav")

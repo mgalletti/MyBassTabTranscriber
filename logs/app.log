@@ -548,3 +548,554 @@
 [32m2024-12-01 17:36:19.611[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36mcheck_audio_loudness[0m:[36m28[0m - [1mAverage RMS: 0.07489961385726929[0m
 [32m2024-12-01 17:36:19.611[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36mcheck_audio_loudness[0m:[36m36[0m - [1mAudio file loudness within range[0m
 [32m2024-12-01 17:36:19.611[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36msave_as_wav[0m:[36m18[0m - [1mConverting file 'my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3' and saving it to 'my_bass_tab_transcriber/uploads/improved_audio_file_path_2024-12-01_17-36-19.wav.[0m
+[32m2024-12-07 18:29:54.379[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 18:29:54.681[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 18:30:49.136[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 18:30:51.808[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 18:30:52.101[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 18:31:41.385[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m77[0m - [1mStarting app...[0m
+[32m2024-12-07 18:31:44.818[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m77[0m - [1mStarting app...[0m
+[32m2024-12-07 18:31:46.232[0m | [1mINFO    [0m | [36m__main__[0m:[36mupload[0m:[36m52[0m - [1mFile: tive razao bass solo-bass.mp3[0m
+[32m2024-12-07 18:31:46.233[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36m__init__[0m:[36m28[0m - [1mValidating file 'uploads/tive razao bass solo-bass.mp3'[0m
+[32m2024-12-07 18:31:46.233[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36mcheck_audio_loudness[0m:[36m44[0m - [1mChecking loudness of file 'uploads/tive razao bass solo-bass.mp3'.[0m
+[32m2024-12-07 18:31:46.718[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mupload[0m:[36m63[0m - [31m[1mError processing file: [Errno 2] No such file or directory: 'uploads/tive razao bass solo-bass.mp3'[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+                   │                │     │       │         └ <class 'numpy.float32'>
+                   │                │     │       └ None
+                   │                │     └ 0.0
+                   │                └ 'uploads/tive razao bass solo-bass.mp3'
+                   └ <function __soundfile_load at 0x113e70860>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+              │  │         └ 'uploads/tive razao bass solo-bass.mp3'
+              │  └ <class 'soundfile.SoundFile'>
+              └ <module 'soundfile' from '/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/soundfile.py'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/soundfile.py", line 658, in __init__
+    self._file = self._open(file, mode_int, closefd)
+    │    │       │    │     │     │         └ True
+    │    │       │    │     │     └ 16
+    │    │       │    │     └ 'uploads/tive razao bass solo-bass.mp3'
+    │    │       │    └ <function SoundFile._open at 0x110050720>
+    │    │       └ SoundFile('uploads/tive razao bass solo-bass.mp3', mode='r', samplerate=0, channels=0, format='FILE', subtype='FILE', endian=...
+    │    └ None
+    └ SoundFile('uploads/tive razao bass solo-bass.mp3', mode='r', samplerate=0, channels=0, format='FILE', subtype='FILE', endian=...
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/soundfile.py", line 1216, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+          │               │                                          │    └ <property object at 0x1100497b0>
+          │               │                                          └ SoundFile('uploads/tive razao bass solo-bass.mp3', mode='r', samplerate=0, channels=0, format='FILE', subtype='FILE', endian=...
+          │               └ 2
+          └ <class 'soundfile.LibsndfileError'>
+
+[31m[1msoundfile.LibsndfileError[0m:[1m Error opening 'uploads/tive razao bass solo-bass.mp3': System error.[0m
+
+
+[1mDuring handling of the above exception, another exception occurred:[0m
+
+
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/threading.py", line 1032, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x1006a7ba0>
+    └ <Thread(Thread-2 (process_request_thread), started daemon 6201782272)>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x1006a7880>
+    └ <Thread(Thread-2 (process_request_thread), started daemon 6201782272)>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-2 (process_request_thread), started daemon 6201782272)>
+    │    │        │    └ (<socket.socket fd=11, family=2, type=1, proto=0, laddr=('127.0.0.1', 5000), raddr=('127.0.0.1', 52867)>, ('127.0.0.1', 52867))
+    │    │        └ <Thread(Thread-2 (process_request_thread), started daemon 6201782272)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <werkzeug.serving.ThreadedWSGIServer object at 0x106df44d0>>
+    └ <Thread(Thread-2 (process_request_thread), started daemon 6201782272)>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 52867)
+    │    │              └ <socket.socket fd=11, family=2, type=1, proto=0, laddr=('127.0.0.1', 5000), raddr=('127.0.0.1', 52867)>
+    │    └ <function BaseServer.finish_request at 0x100df31a0>
+    └ <werkzeug.serving.ThreadedWSGIServer object at 0x106df44d0>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <werkzeug.serving.ThreadedWSGIServer object at 0x106df44d0>
+    │    │                   │        └ ('127.0.0.1', 52867)
+    │    │                   └ <socket.socket fd=11, family=2, type=1, proto=0, laddr=('127.0.0.1', 5000), raddr=('127.0.0.1', 52867)>
+    │    └ <class 'werkzeug.serving.WSGIRequestHandler'>
+    └ <werkzeug.serving.ThreadedWSGIServer object at 0x106df44d0>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x1011db740>
+    └ <werkzeug.serving.WSGIRequestHandler object at 0x1077e7170>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/serving.py", line 398, in handle
+    super().handle()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+    │    └ <function BaseHTTPRequestHandler.handle_one_request at 0x10109f7e0>
+    └ <werkzeug.serving.WSGIRequestHandler object at 0x1077e7170>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+    └ <bound method WSGIRequestHandler.run_wsgi of <werkzeug.serving.WSGIRequestHandler object at 0x1077e7170>>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    │       │    │      └ <werkzeug.debug.DebuggedApplication object at 0x10552f1a0>
+    │       │    └ <werkzeug.serving.ThreadedWSGIServer object at 0x106df44d0>
+    │       └ <werkzeug.serving.WSGIRequestHandler object at 0x1077e7170>
+    └ <function WSGIRequestHandler.run_wsgi.<locals>.execute at 0x110014fe0>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/serving.py", line 333, in execute
+    for data in application_iter:
+                └ <generator object DebuggedApplication.debug_application at 0x1077169d0>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/debug/__init__.py", line 343, in debug_application
+    app_iter = self.app(environ, start_response)
+               │    │   │        └ <function WSGIRequestHandler.run_wsgi.<locals>.start_response at 0x110014f40>
+               │    │   └ {'wsgi.version': (1, 0), 'wsgi.url_scheme': 'http', 'wsgi.input': <_io.BufferedReader name=11>, 'wsgi.errors': <_io.TextIOWra...
+               │    └ <Flask 'app'>
+               └ <werkzeug.debug.DebuggedApplication object at 0x10552f1a0>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           │    │        │        └ <function WSGIRequestHandler.run_wsgi.<locals>.start_response at 0x110014f40>
+           │    │        └ {'wsgi.version': (1, 0), 'wsgi.url_scheme': 'http', 'wsgi.input': <_io.BufferedReader name=11>, 'wsgi.errors': <_io.TextIOWra...
+           │    └ <function Flask.wsgi_app at 0x10235c5e0>
+           └ <Flask 'app'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               │    └ <function Flask.full_dispatch_request at 0x102347ce0>
+               └ <Flask 'app'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         │    └ <function Flask.dispatch_request at 0x102347c40>
+         └ <Flask 'app'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           │    │           │    │              │    │            └ {}
+           │    │           │    │              │    └ 'upload'
+           │    │           │    │              └ <Rule '/upload' (POST, GET, OPTIONS, HEAD) -> upload>
+           │    │           │    └ {'static': <function Flask.__init__.<locals>.<lambda> at 0x10775d4e0>, 'home': <function home at 0x10775de40>, 'upload': <fun...
+           │    │           └ <Flask 'app'>
+           │    └ <function Flask.ensure_sync at 0x102347ec0>
+           └ <Flask 'app'>
+
+> File "[32m/Users/mgalletti/coding/my-bass-tab-transcriber/src/my_bass_tab_transcriber/[0m[32m[1mapp.py[0m", line [33m55[0m, in [35mupload[0m
+    [1maudio_file_service[0m[35m[1m.[0m[1mcheck_audio_loudness[0m[1m([0m[1m)[0m
+    [36m│                  └ [0m[36m[1m<function AudioFileService.check_audio_loudness at 0x10775cea0>[0m
+    [36m└ [0m[36m[1m<services.audio_service.AudioFileService object at 0x10774b500>[0m
+
+  File "[32m/Users/mgalletti/coding/my-bass-tab-transcriber/src/my_bass_tab_transcriber/services/[0m[32m[1maudio_service.py[0m", line [33m52[0m, in [35mcheck_audio_loudness[0m
+    [1maudio[0m[1m,[0m [1m_[0m [35m[1m=[0m [1mlibrosa[0m[35m[1m.[0m[1mload[0m[1m([0m[1mself[0m[35m[1m.[0m[1maudio_file_path[0m[1m)[0m
+    [36m           │            │    └ [0m[36m[1m'uploads/tive razao bass solo-bass.mp3'[0m
+    [36m           │            └ [0m[36m[1m<services.audio_service.AudioFileService object at 0x10774b500>[0m
+    [36m           └ [0m[36m[1m<module 'librosa' from '/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/__init__.py'>[0m
+
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+                   │                │     │       │         └ <class 'numpy.float32'>
+                   │                │     │       └ None
+                   │                │     └ 0.0
+                   │                └ 'uploads/tive razao bass solo-bass.mp3'
+                   └ <function __audioread_load at 0x113e70b80>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           │      │       │        │        └ {}
+           │      │       │        └ ('uploads/tive razao bass solo-bass.mp3', 0.0, None, <class 'numpy.float32'>)
+           │      │       └ ()
+           │      └ <function __audioread_load at 0x113e709a0>
+           └ <function deprecated.<locals>.__wrapper at 0x113e70900>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/util/decorators.py", line 59, in __wrapper
+    return func(*args, **kwargs)
+           │     │       └ {}
+           │     └ ('uploads/tive razao bass solo-bass.mp3', 0.0, None, <class 'numpy.float32'>)
+           └ <function __audioread_load at 0x113e709a0>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+             │         │          └ 'uploads/tive razao bass solo-bass.mp3'
+             │         └ <function audio_open at 0x110052a20>
+             └ <module 'audioread' from '/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/audioread/__init...
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/audioread/__init__.py", line 127, in audio_open
+    return BackendClass(path)
+           │            └ 'uploads/tive razao bass solo-bass.mp3'
+           └ <class 'audioread.rawread.RawAudioFile'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/audioread/rawread.py", line 59, in __init__
+    self._fh = open(filename, 'rb')
+    │               └ 'uploads/tive razao bass solo-bass.mp3'
+    └ <audioread.rawread.RawAudioFile object at 0x114d4cf50>
+
+[31m[1mFileNotFoundError[0m:[1m [Errno 2] No such file or directory: 'uploads/tive razao bass solo-bass.mp3'[0m
+[32m2024-12-07 18:32:35.821[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m77[0m - [1mStarting app...[0m
+[32m2024-12-07 18:32:36.117[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m77[0m - [1mStarting app...[0m
+[32m2024-12-07 18:32:41.697[0m | [1mINFO    [0m | [36m__main__[0m:[36mupload[0m:[36m52[0m - [1mFile: tive razao bass solo-bass.mp3[0m
+[32m2024-12-07 18:32:41.698[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36m__init__[0m:[36m28[0m - [1mValidating file 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'[0m
+[32m2024-12-07 18:32:41.698[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36mcheck_audio_loudness[0m:[36m44[0m - [1mChecking loudness of file 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'.[0m
+[32m2024-12-07 18:32:42.142[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36mcheck_audio_loudness[0m:[36m56[0m - [1mAverage RMS: 0.07489961385726929[0m
+[32m2024-12-07 18:32:42.142[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36mcheck_audio_loudness[0m:[36m72[0m - [1mAudio file loudness within range[0m
+[32m2024-12-07 18:32:42.142[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36msave_as_wav[0m:[36m34[0m - [1mConverting file 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3' and saving it to 'src/my_bass_tab_transcriber/uploads/improved_audio_file_path_2024-12-07_18-32-42.wav.[0m
+[32m2024-12-07 18:33:19.527[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 18:33:32.292[0m | [1mINFO    [0m | [36m__main__[0m:[36mupload[0m:[36m51[0m - [1mFile: tive razao bass solo-bass.mp3[0m
+[32m2024-12-07 18:33:32.293[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36m__init__[0m:[36m28[0m - [1mValidating file 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'[0m
+[32m2024-12-07 18:33:32.293[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36mcheck_audio_loudness[0m:[36m44[0m - [1mChecking loudness of file 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'.[0m
+[32m2024-12-07 18:33:32.619[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mupload[0m:[36m62[0m - [31m[1mError processing file: [Errno 2] No such file or directory: 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+                   │                │     │       │         └ <class 'numpy.float32'>
+                   │                │     │       └ None
+                   │                │     └ 0.0
+                   │                └ 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'
+                   └ <function __soundfile_load at 0x109870860>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+              │  │         └ 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'
+              │  └ <class 'soundfile.SoundFile'>
+              └ <module 'soundfile' from '/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/soundfile.py'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/soundfile.py", line 658, in __init__
+    self._file = self._open(file, mode_int, closefd)
+    │    │       │    │     │     │         └ True
+    │    │       │    │     │     └ 16
+    │    │       │    │     └ 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'
+    │    │       │    └ <function SoundFile._open at 0x108730720>
+    │    │       └ SoundFile('src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3', mode='r', samplerate=0, channels=0, format='FI...
+    │    └ None
+    └ SoundFile('src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3', mode='r', samplerate=0, channels=0, format='FI...
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/soundfile.py", line 1216, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+          │               │                                          │    └ <property object at 0x10872d620>
+          │               │                                          └ SoundFile('src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3', mode='r', samplerate=0, channels=0, format='FI...
+          │               └ 2
+          └ <class 'soundfile.LibsndfileError'>
+
+[31m[1msoundfile.LibsndfileError[0m:[1m Error opening 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3': System error.[0m
+
+
+[1mDuring handling of the above exception, another exception occurred:[0m
+
+
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/threading.py", line 1032, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x10264bba0>
+    └ <Thread(Thread-2 (process_request_thread), started daemon 6168604672)>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x10264b880>
+    └ <Thread(Thread-2 (process_request_thread), started daemon 6168604672)>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-2 (process_request_thread), started daemon 6168604672)>
+    │    │        │    └ (<socket.socket fd=11, family=2, type=1, proto=0, laddr=('127.0.0.1', 5000), raddr=('127.0.0.1', 52878)>, ('127.0.0.1', 52878))
+    │    │        └ <Thread(Thread-2 (process_request_thread), started daemon 6168604672)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <werkzeug.serving.ThreadedWSGIServer object at 0x108447ce0>>
+    └ <Thread(Thread-2 (process_request_thread), started daemon 6168604672)>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 52878)
+    │    │              └ <socket.socket fd=11, family=2, type=1, proto=0, laddr=('127.0.0.1', 5000), raddr=('127.0.0.1', 52878)>
+    │    └ <function BaseServer.finish_request at 0x102d971a0>
+    └ <werkzeug.serving.ThreadedWSGIServer object at 0x108447ce0>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <werkzeug.serving.ThreadedWSGIServer object at 0x108447ce0>
+    │    │                   │        └ ('127.0.0.1', 52878)
+    │    │                   └ <socket.socket fd=11, family=2, type=1, proto=0, laddr=('127.0.0.1', 5000), raddr=('127.0.0.1', 52878)>
+    │    └ <class 'werkzeug.serving.WSGIRequestHandler'>
+    └ <werkzeug.serving.ThreadedWSGIServer object at 0x108447ce0>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x10317f740>
+    └ <werkzeug.serving.WSGIRequestHandler object at 0x1086cb050>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/serving.py", line 398, in handle
+    super().handle()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+    │    └ <function BaseHTTPRequestHandler.handle_one_request at 0x1030437e0>
+    └ <werkzeug.serving.WSGIRequestHandler object at 0x1086cb050>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+    └ <bound method WSGIRequestHandler.run_wsgi of <werkzeug.serving.WSGIRequestHandler object at 0x1086cb050>>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    │       │    │      └ <werkzeug.debug.DebuggedApplication object at 0x10860b170>
+    │       │    └ <werkzeug.serving.ThreadedWSGIServer object at 0x108447ce0>
+    │       └ <werkzeug.serving.WSGIRequestHandler object at 0x1086cb050>
+    └ <function WSGIRequestHandler.run_wsgi.<locals>.execute at 0x1086f8fe0>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/serving.py", line 333, in execute
+    for data in application_iter:
+                └ <generator object DebuggedApplication.debug_application at 0x1085fa9d0>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/debug/__init__.py", line 343, in debug_application
+    app_iter = self.app(environ, start_response)
+               │    │   │        └ <function WSGIRequestHandler.run_wsgi.<locals>.start_response at 0x1086f8f40>
+               │    │   └ {'wsgi.version': (1, 0), 'wsgi.url_scheme': 'http', 'wsgi.input': <_io.BufferedReader name=11>, 'wsgi.errors': <_io.TextIOWra...
+               │    └ <Flask 'app'>
+               └ <werkzeug.debug.DebuggedApplication object at 0x10860b170>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           │    │        │        └ <function WSGIRequestHandler.run_wsgi.<locals>.start_response at 0x1086f8f40>
+           │    │        └ {'wsgi.version': (1, 0), 'wsgi.url_scheme': 'http', 'wsgi.input': <_io.BufferedReader name=11>, 'wsgi.errors': <_io.TextIOWra...
+           │    └ <function Flask.wsgi_app at 0x1043005e0>
+           └ <Flask 'app'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               │    └ <function Flask.full_dispatch_request at 0x1042ebce0>
+               └ <Flask 'app'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         │    └ <function Flask.dispatch_request at 0x1042ebc40>
+         └ <Flask 'app'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           │    │           │    │              │    │            └ {}
+           │    │           │    │              │    └ 'upload'
+           │    │           │    │              └ <Rule '/upload' (OPTIONS, GET, HEAD, POST) -> upload>
+           │    │           │    └ {'static': <function Flask.__init__.<locals>.<lambda> at 0x1086414e0>, 'home': <function home at 0x108641e40>, 'upload': <fun...
+           │    │           └ <Flask 'app'>
+           │    └ <function Flask.ensure_sync at 0x1042ebec0>
+           └ <Flask 'app'>
+
+> File "[32m/Users/mgalletti/coding/my-bass-tab-transcriber/src/my_bass_tab_transcriber/[0m[32m[1mapp.py[0m", line [33m54[0m, in [35mupload[0m
+    [1maudio_file_service[0m[35m[1m.[0m[1mcheck_audio_loudness[0m[1m([0m[1m)[0m
+    [36m│                  └ [0m[36m[1m<function AudioFileService.check_audio_loudness at 0x108640ea0>[0m
+    [36m└ [0m[36m[1m<services.audio_service.AudioFileService object at 0x1071af890>[0m
+
+  File "[32m/Users/mgalletti/coding/my-bass-tab-transcriber/src/my_bass_tab_transcriber/services/[0m[32m[1maudio_service.py[0m", line [33m52[0m, in [35mcheck_audio_loudness[0m
+    [1maudio[0m[1m,[0m [1m_[0m [35m[1m=[0m [1mlibrosa[0m[35m[1m.[0m[1mload[0m[1m([0m[1mself[0m[35m[1m.[0m[1maudio_file_path[0m[1m)[0m
+    [36m           │            │    └ [0m[36m[1m'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'[0m
+    [36m           │            └ [0m[36m[1m<services.audio_service.AudioFileService object at 0x1071af890>[0m
+    [36m           └ [0m[36m[1m<module 'librosa' from '/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/__init__.py'>[0m
+
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+                   │                │     │       │         └ <class 'numpy.float32'>
+                   │                │     │       └ None
+                   │                │     └ 0.0
+                   │                └ 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'
+                   └ <function __audioread_load at 0x109870b80>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           │      │       │        │        └ {}
+           │      │       │        └ ('src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3', 0.0, None, <class 'numpy.float32'>)
+           │      │       └ ()
+           │      └ <function __audioread_load at 0x1098709a0>
+           └ <function deprecated.<locals>.__wrapper at 0x109870900>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/util/decorators.py", line 59, in __wrapper
+    return func(*args, **kwargs)
+           │     │       └ {}
+           │     └ ('src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3', 0.0, None, <class 'numpy.float32'>)
+           └ <function __audioread_load at 0x1098709a0>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+             │         │          └ 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'
+             │         └ <function audio_open at 0x108732a20>
+             └ <module 'audioread' from '/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/audioread/__init...
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/audioread/__init__.py", line 127, in audio_open
+    return BackendClass(path)
+           │            └ 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'
+           └ <class 'audioread.rawread.RawAudioFile'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/audioread/rawread.py", line 59, in __init__
+    self._fh = open(filename, 'rb')
+    │               └ 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'
+    └ <audioread.rawread.RawAudioFile object at 0x10a828f50>
+
+[31m[1mFileNotFoundError[0m:[1m [Errno 2] No such file or directory: 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'[0m
+[32m2024-12-07 18:36:02.251[0m | [1mINFO    [0m | [36m__main__[0m:[36mupload[0m:[36m51[0m - [1mFile: tive razao bass solo-bass.mp3[0m
+[32m2024-12-07 18:36:02.251[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36m__init__[0m:[36m28[0m - [1mValidating file 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'[0m
+[32m2024-12-07 18:36:02.251[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36mcheck_audio_loudness[0m:[36m44[0m - [1mChecking loudness of file 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3'.[0m
+[32m2024-12-07 18:36:02.491[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36mcheck_audio_loudness[0m:[36m56[0m - [1mAverage RMS: 0.07489961385726929[0m
+[32m2024-12-07 18:36:02.491[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36mcheck_audio_loudness[0m:[36m72[0m - [1mAudio file loudness within range[0m
+[32m2024-12-07 18:36:02.491[0m | [1mINFO    [0m | [36mservices.audio_service[0m:[36msave_as_wav[0m:[36m34[0m - [1mConverting file 'src/my_bass_tab_transcriber/uploads/tive razao bass solo-bass.mp3' and saving it to 'src/my_bass_tab_transcriber/uploads/improved_audio_file_path_2024-12-07_18-36-02.wav.[0m
+[32m2024-12-07 18:46:35.135[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 18:46:35.437[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:16:19.103[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:16:19.399[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:20:22.650[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:20:22.943[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:23:11.429[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:23:11.718[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:24:02.268[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:24:02.559[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:37:34.487[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:37:34.786[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:40:49.748[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:40:50.038[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:41:34.329[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:41:34.625[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:41:44.406[0m | [1mINFO    [0m | [36m__main__[0m:[36mupload[0m:[36m51[0m - [1mFile: tive razao bass solo-bass.mp3[0m
+[32m2024-12-07 19:41:44.407[0m | [1mINFO    [0m | [36mmy_bass_tab_transcriber.services.audio_service[0m:[36m__init__[0m:[36m32[0m - [1mValidating file '../uploads/tive razao bass solo-bass.mp3'[0m
+[32m2024-12-07 19:41:44.407[0m | [1mINFO    [0m | [36mmy_bass_tab_transcriber.services.audio_service[0m:[36mcheck_audio_loudness[0m:[36m48[0m - [1mChecking loudness of file '../uploads/tive razao bass solo-bass.mp3'.[0m
+[32m2024-12-07 19:41:44.845[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mupload[0m:[36m62[0m - [31m[1mError processing file: [Errno 2] No such file or directory: '../uploads/tive razao bass solo-bass.mp3'[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+                   │                │     │       │         └ <class 'numpy.float32'>
+                   │                │     │       └ None
+                   │                │     └ 0.0
+                   │                └ '../uploads/tive razao bass solo-bass.mp3'
+                   └ <function __soundfile_load at 0x109a8f9c0>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+              │  │         └ '../uploads/tive razao bass solo-bass.mp3'
+              │  └ <class 'soundfile.SoundFile'>
+              └ <module 'soundfile' from '/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/soundfile.py'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/soundfile.py", line 658, in __init__
+    self._file = self._open(file, mode_int, closefd)
+    │    │       │    │     │     │         └ True
+    │    │       │    │     │     └ 16
+    │    │       │    │     └ '../uploads/tive razao bass solo-bass.mp3'
+    │    │       │    └ <function SoundFile._open at 0x108887880>
+    │    │       └ SoundFile('../uploads/tive razao bass solo-bass.mp3', mode='r', samplerate=0, channels=0, format='FILE', subtype='FILE', endi...
+    │    └ None
+    └ SoundFile('../uploads/tive razao bass solo-bass.mp3', mode='r', samplerate=0, channels=0, format='FILE', subtype='FILE', endi...
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/soundfile.py", line 1216, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+          │               │                                          │    └ <property object at 0x1088b1300>
+          │               │                                          └ SoundFile('../uploads/tive razao bass solo-bass.mp3', mode='r', samplerate=0, channels=0, format='FILE', subtype='FILE', endi...
+          │               └ 2
+          └ <class 'soundfile.LibsndfileError'>
+
+[31m[1msoundfile.LibsndfileError[0m:[1m Error opening '../uploads/tive razao bass solo-bass.mp3': System error.[0m
+
+
+[1mDuring handling of the above exception, another exception occurred:[0m
+
+
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/threading.py", line 1032, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x1027a7ba0>
+    └ <Thread(Thread-3 (process_request_thread), started daemon 6184005632)>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x1027a7880>
+    └ <Thread(Thread-3 (process_request_thread), started daemon 6184005632)>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-3 (process_request_thread), started daemon 6184005632)>
+    │    │        │    └ (<socket.socket fd=12, family=2, type=1, proto=0, laddr=('127.0.0.1', 5000), raddr=('127.0.0.1', 53336)>, ('127.0.0.1', 53336))
+    │    │        └ <Thread(Thread-3 (process_request_thread), started daemon 6184005632)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <werkzeug.serving.ThreadedWSGIServer object at 0x105c0c5f0>>
+    └ <Thread(Thread-3 (process_request_thread), started daemon 6184005632)>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 53336)
+    │    │              └ <socket.socket fd=12, family=2, type=1, proto=0, laddr=('127.0.0.1', 5000), raddr=('127.0.0.1', 53336)>
+    │    └ <function BaseServer.finish_request at 0x102ef31a0>
+    └ <werkzeug.serving.ThreadedWSGIServer object at 0x105c0c5f0>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <werkzeug.serving.ThreadedWSGIServer object at 0x105c0c5f0>
+    │    │                   │        └ ('127.0.0.1', 53336)
+    │    │                   └ <socket.socket fd=12, family=2, type=1, proto=0, laddr=('127.0.0.1', 5000), raddr=('127.0.0.1', 53336)>
+    │    └ <class 'werkzeug.serving.WSGIRequestHandler'>
+    └ <werkzeug.serving.ThreadedWSGIServer object at 0x105c0c5f0>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x1032db740>
+    └ <werkzeug.serving.WSGIRequestHandler object at 0x108865f40>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/serving.py", line 398, in handle
+    super().handle()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+    │    └ <function BaseHTTPRequestHandler.handle_one_request at 0x10319f7e0>
+    └ <werkzeug.serving.WSGIRequestHandler object at 0x108865f40>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+    └ <bound method WSGIRequestHandler.run_wsgi of <werkzeug.serving.WSGIRequestHandler object at 0x108865f40>>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    │       │    │      └ <werkzeug.debug.DebuggedApplication object at 0x10852e5d0>
+    │       │    └ <werkzeug.serving.ThreadedWSGIServer object at 0x105c0c5f0>
+    │       └ <werkzeug.serving.WSGIRequestHandler object at 0x108865f40>
+    └ <function WSGIRequestHandler.run_wsgi.<locals>.execute at 0x1088842c0>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/serving.py", line 333, in execute
+    for data in application_iter:
+                └ <generator object DebuggedApplication.debug_application at 0x108762d60>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/werkzeug/debug/__init__.py", line 343, in debug_application
+    app_iter = self.app(environ, start_response)
+               │    │   │        └ <function WSGIRequestHandler.run_wsgi.<locals>.start_response at 0x108884180>
+               │    │   └ {'wsgi.version': (1, 0), 'wsgi.url_scheme': 'http', 'wsgi.input': <_io.BufferedReader name=12>, 'wsgi.errors': <_io.TextIOWra...
+               │    └ <Flask 'app'>
+               └ <werkzeug.debug.DebuggedApplication object at 0x10852e5d0>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           │    │        │        └ <function WSGIRequestHandler.run_wsgi.<locals>.start_response at 0x108884180>
+           │    │        └ {'wsgi.version': (1, 0), 'wsgi.url_scheme': 'http', 'wsgi.input': <_io.BufferedReader name=12>, 'wsgi.errors': <_io.TextIOWra...
+           │    └ <function Flask.wsgi_app at 0x10445c5e0>
+           └ <Flask 'app'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               │    └ <function Flask.full_dispatch_request at 0x104447ce0>
+               └ <Flask 'app'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         │    └ <function Flask.dispatch_request at 0x104447c40>
+         └ <Flask 'app'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           │    │           │    │              │    │            └ {}
+           │    │           │    │              │    └ 'upload'
+           │    │           │    │              └ <Rule '/upload' (HEAD, POST, OPTIONS, GET) -> upload>
+           │    │           │    └ {'static': <function Flask.__init__.<locals>.<lambda> at 0x1087ad580>, 'home': <function home at 0x1087adee0>, 'upload': <fun...
+           │    │           └ <Flask 'app'>
+           │    └ <function Flask.ensure_sync at 0x104447ec0>
+           └ <Flask 'app'>
+
+> File "[32m/Users/mgalletti/coding/my-bass-tab-transcriber/src/[0m[32m[1mapp.py[0m", line [33m54[0m, in [35mupload[0m
+    [1maudio_file_service[0m[35m[1m.[0m[1mcheck_audio_loudness[0m[1m([0m[1m)[0m
+    [36m│                  └ [0m[36m[1m<function AudioFileService.check_audio_loudness at 0x1087acf40>[0m
+    [36m└ [0m[36m[1m<my_bass_tab_transcriber.services.audio_service.AudioFileService object at 0x1072c5790>[0m
+
+  File "[32m/Users/mgalletti/coding/my-bass-tab-transcriber/src/my_bass_tab_transcriber/services/[0m[32m[1maudio_service.py[0m", line [33m56[0m, in [35mcheck_audio_loudness[0m
+    [1maudio[0m[1m,[0m [1m_[0m [35m[1m=[0m [1mlibrosa[0m[35m[1m.[0m[1mload[0m[1m([0m[1mself[0m[35m[1m.[0m[1maudio_file_path[0m[1m)[0m
+    [36m           │            │    └ [0m[36m[1m'../uploads/tive razao bass solo-bass.mp3'[0m
+    [36m           │            └ [0m[36m[1m<my_bass_tab_transcriber.services.audio_service.AudioFileService object at 0x1072c5790>[0m
+    [36m           └ [0m[36m[1m<module 'librosa' from '/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/__init__.py'>[0m
+
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+                   │                │     │       │         └ <class 'numpy.float32'>
+                   │                │     │       └ None
+                   │                │     └ 0.0
+                   │                └ '../uploads/tive razao bass solo-bass.mp3'
+                   └ <function __audioread_load at 0x109a8fce0>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           │      │       │        │        └ {}
+           │      │       │        └ ('../uploads/tive razao bass solo-bass.mp3', 0.0, None, <class 'numpy.float32'>)
+           │      │       └ ()
+           │      └ <function __audioread_load at 0x109a8fb00>
+           └ <function deprecated.<locals>.__wrapper at 0x109a8fa60>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/util/decorators.py", line 59, in __wrapper
+    return func(*args, **kwargs)
+           │     │       └ {}
+           │     └ ('../uploads/tive razao bass solo-bass.mp3', 0.0, None, <class 'numpy.float32'>)
+           └ <function __audioread_load at 0x109a8fb00>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/librosa/core/audio.py", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+             │         │          └ '../uploads/tive razao bass solo-bass.mp3'
+             │         └ <function audio_open at 0x1088b5bc0>
+             └ <module 'audioread' from '/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/audioread/__init...
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/audioread/__init__.py", line 127, in audio_open
+    return BackendClass(path)
+           │            └ '../uploads/tive razao bass solo-bass.mp3'
+           └ <class 'audioread.rawread.RawAudioFile'>
+  File "/Users/mgalletti/coding/my-bass-tab-transcriber/.venv/lib/python3.12/site-packages/audioread/rawread.py", line 59, in __init__
+    self._fh = open(filename, 'rb')
+    │               └ '../uploads/tive razao bass solo-bass.mp3'
+    └ <audioread.rawread.RawAudioFile object at 0x10a964650>
+
+[31m[1mFileNotFoundError[0m:[1m [Errno 2] No such file or directory: '../uploads/tive razao bass solo-bass.mp3'[0m
+[32m2024-12-07 19:42:07.758[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m76[0m - [1mStarting app...[0m
+[32m2024-12-07 19:42:12.430[0m | [1mINFO    [0m | [36m__main__[0m:[36mupload[0m:[36m51[0m - [1mFile: tive razao bass solo-bass.mp3[0m
+[32m2024-12-07 19:42:12.431[0m | [1mINFO    [0m | [36mmy_bass_tab_transcriber.services.audio_service[0m:[36m__init__[0m:[36m32[0m - [1mValidating file 'uploads/tive razao bass solo-bass.mp3'[0m
+[32m2024-12-07 19:42:12.431[0m | [1mINFO    [0m | [36mmy_bass_tab_transcriber.services.audio_service[0m:[36mcheck_audio_loudness[0m:[36m48[0m - [1mChecking loudness of file 'uploads/tive razao bass solo-bass.mp3'.[0m
+[32m2024-12-07 19:42:12.981[0m | [1mINFO    [0m | [36mmy_bass_tab_transcriber.services.audio_service[0m:[36mcheck_audio_loudness[0m:[36m60[0m - [1mAverage RMS: 0.07489961385726929[0m
+[32m2024-12-07 19:42:12.981[0m | [1mINFO    [0m | [36mmy_bass_tab_transcriber.services.audio_service[0m:[36mcheck_audio_loudness[0m:[36m76[0m - [1mAudio file loudness within range[0m
+[32m2024-12-07 19:42:12.981[0m | [1mINFO    [0m | [36mmy_bass_tab_transcriber.services.audio_service[0m:[36msave_as_wav[0m:[36m38[0m - [1mConverting file 'uploads/tive razao bass solo-bass.mp3' and saving it to 'uploads/improved_audio_file_path_2024-12-07_19-42-12.wav.[0m
+[32m2024-12-08 12:15:03.531[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m79[0m - [1mStarting app...[0m
+[32m2024-12-08 12:15:03.834[0m | [1mINFO    [0m | [36m__main__[0m:[36m<module>[0m:[36m79[0m - [1mStarting app...[0m
